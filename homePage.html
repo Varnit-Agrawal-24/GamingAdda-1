@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./homeStyle.css" />
+    <title>Gambulls</title>
+  </head>
+  <body>
+    <div id="welcomePage">
+      <video id="welcomeVideo" autoplay muted loop>
+        <source src="./img/stars.mp4" type="video/mp4" />
+      </video>
+      <h1>WELLCOME<br />TO<br />GAMING ADDA</h1>
+      <div id="PlayerId">
+        <input id="nameId" type="text" placeholder="Enter your name" />
+        <input
+          id="ageId"
+          type="number"
+          min="8"
+          max="100"
+          placeholder="Enter your age"
+        />
+        <button id="letPlay" class="button">Let's Play</button>
+      </div>
+    </div>
+    <div id="wrapper" class="hidden">
+      <nav class="navbar">
+        <!-- <video autoplay loop muted id="videoBar">
+        <source src="./img/stars.mp4" type="video/mp4" />
+      </video> -->
+        <h2 id="logo">Gaming Adda</h2>
+      </nav>
+      <div id="container">
+        <div id="overlay" class="overlay"></div>
+        <!-- <img class="icon" src="./img/icon1.png" alt="" />
+      <img class="icon" src="./img/icon2.png" alt="" />
+      <img class="icon" src="./img/icon3.png" alt="" /> -->
+        <div id="console">
+          <div id="arrowNext">
+            <img src="./img/nextOverlay.png" alt="" />
+            <button class="button" onclick="forNext()">Next</button>
+          </div>
+          <div id="arrowBack" class="hidden">
+            <img src="./img/backOverlay.png" alt="" />
+            <button class="button" onclick="forBack()">Next</button>
+          </div>
+          <div id="arrowStart" class="hidden">
+            <img src="./img/startOverlay.png" alt="" />
+            <button class="button" onclick="forStart()">Ok</button>
+          </div>
+          <div id="gameStack">
+            <img class="cover" src="./img/snakeCover.jpg" alt="" />
+            <img class="cover" src="./img/carCover.jpg" alt="" />
+            <img class="cover" src="./img/sudokuCover.jpeg" alt="" />
+            <img class="cover" src="./img/ticCover.png" alt="" />
+            <img class="cover" src="./img/dragonCover.jpg" alt="" />
+          </div>
+          <button class="nextGame" onclick="next()"></button>
+          <button class="lastGame" onclick="back()"></button>
+        </div>
+        <div class="nowPlaying">
+          <h3 id="playerName"></h3>
+          <img class="frame" src="./img/frame.png" alt="" />
+          <h3>Now Playing</h3>
+          <div class="selectedGames">
+            <div class="gameSelect">
+              <h4>Snake</h4>
+              <a href="./Snake/index.html"
+                ><img src="./img/start.png" style="width: 90px" alt=""
+              /></a>
+            </div>
+            <div class="gameSelect">
+              <h4>Car Racing</h4>
+              <a><img src="./img/start.png" style="width: 90px" alt="" /></a>
+            </div>
+            <div class="gameSelect">
+              <h4>Sudoku</h4>
+              <a><img src="./img/start.png" style="width: 90px" alt="" /></a>
+            </div>
+            <div class="gameSelect">
+              <h4>Tic Tac Toe</h4>
+              <a><img src="./img/start.png" style="width: 90px" alt="" /></a>
+            </div>
+            <div class="gameSelect">
+              <h4>Dragon Fire</h4>
+              <a><img src="./img/start.png" style="width: 90px" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./homeScript.js"></script>
+  </body>
+</html>
