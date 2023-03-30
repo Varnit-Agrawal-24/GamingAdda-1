@@ -81,11 +81,22 @@ body {
 
 .navbar {
   display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
   align-items: center;
   width: 100%;
   height: 80px;
   position: relative;
 }
+#logout {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  transition: text-shadow 0.5s ease-in-out;
+}
+#logout:hover {
+  text-shadow: 6px -4px 11px #ff0000, -4px 3px 14px #0000ff;
+}
+
 #logo {
   margin: 0;
   margin-left: 40px;

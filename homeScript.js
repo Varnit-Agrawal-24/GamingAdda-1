@@ -2,6 +2,7 @@ let playbtn = document.getElementById("letPlay");
 let wrap = document.getElementById("wrapper");
 let overlay = document.getElementById("overlay");
 let wlcPage = document.getElementById("welcomePage");
+let logbtn = document.getElementById("logout");
 let covers = document.querySelectorAll(".cover");
 let gamesSelected = document.querySelectorAll(".gameSelect");
 
@@ -30,6 +31,12 @@ if (localStorage["loginUser"]) {
   document.getElementById("playerName").innerText =
     "Player: " + localStorage.getItem("loginUser");
 }
+logbtn.addEventListener("click", function () {
+  setTimeout(() => {
+    localStorage.clear();
+    location.reload();
+  }, 1000);
+});
 
 // for console cover
 covers.forEach((cover, index) => {

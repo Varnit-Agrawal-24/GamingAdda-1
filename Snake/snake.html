@@ -4,7 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./snakeStyle.css" />
     <title>Snake</title>
   </head>
-  <body></body>
+  <body>
+    <div id="overlay"></div>
+    <div id="boxHolder">
+      <div id="score">
+        <img src="./img/food.png" alt="" style="width: 5vmin" />
+        0
+      </div>
+      <div id="highScore">
+        <img src="./img/trophy.png" alt="" style="width: 5vmin" />
+        0
+      </div>
+    </div>
+    <div id="card" class="hidden">
+      <div id="cardScore">
+        <div id="Afterscore">
+          <img src="./img/food.png" alt="" style="width: 5vmin" />
+          0
+        </div>
+        <div id="AfterhighScore">
+          <img src="./img/trophy.png" alt="" style="width: 5vmin" />
+          0
+        </div>
+      </div>
+      <div id="levelSelector">
+        <input type="radio" name="speed" value="Easy" checked />Easy
+        <input type="radio" name="speed" value="Hard" />Hard
+        <input type="radio" name="speed" value="GodLevel" />GodLevel
+      </div>
+      <button id="btn" type="button" onclick="getSpeed(); startbtn();">
+        Play
+      </button>
+    </div>
+    <div id="gameBoard"></div>
+    <script src="./snakeScript.js" defer></script>
+  </body>
 </html>

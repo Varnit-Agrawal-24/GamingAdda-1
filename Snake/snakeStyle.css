@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: white;
+}
+.hide {
+  display: none;
+}
+/* overlay */
+#overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 80vmin;
+  height: 88vmin;
+}
+
+#gameBoard {
+  display: grid;
+  height: 80vmin;
+  width: 80vmin;
+  /* background-image: radial-gradient(circle, lightgreen, greenyellow); */
+  background-image: url(./img/bg.png);
+  background-size: contain;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(21, 1fr);
+}
+
+.head {
+  background-color: blueviolet;
+  position: relative;
+  z-index: 1;
+  border: 0.25vmin solid black;
+}
+.snake {
+  background-color: rgb(153, 87, 215);
+  border: 0.25vmin solid black;
+}
+.food {
+  background-image: url(./img/food.png);
+  background-size: contain;
+}
+#score {
+  font-size: 3vmin;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 8vmin;
+}
+#highScore {
+  font-size: 3vmin;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 8vmin;
+}
+#boxHolder {
+  display: flex;
+  width: 80vmin;
+  gap: 10vmin;
+  margin-bottom: 10px;
+}
+#card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  background-color: antiquewhite;
+  width: 40vmin;
+  height: 60vmin;
+  z-index: 2;
+  border-radius: 10px;
+}
+#cardScore {
+  display: flex;
+  height: 20vmin;
+  gap: 30px;
+}
+#Afterscore,
+#AfterhighScore {
+  font-size: 3vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#levelSelector {
+  font-size: 1.5vmin;
+  font-family: "Press Start 2P", cursive;
+}
+#btn {
+  background-color: rgb(20, 90, 255);
+  border: 0 none;
+  color: white;
+  width: 20vmin;
+  height: 8vmin;
+  border-radius: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+}
