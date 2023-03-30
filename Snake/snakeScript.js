@@ -9,6 +9,8 @@ let snakeBody = [{ x: 11, y: 11 }];
 let foodPosition = randomFood();
 
 const foodSound = new Audio("music/food.mp3");
+const gameoverSound = new Audio("music/gameover.mp3");
+
 let scoreBox = document.getElementById("score");
 let hiscoreBox = document.getElementById("highScore");
 let points = 0;
@@ -52,6 +54,7 @@ function updateSnake() {
   snakeBody[0].y += inputDir.y;
 
   if (isCollide(snakeBody)) {
+    gameoverSound.play();
     inputDirection = { x: 0, y: 0 };
     // alert("Game Over");
     snakeBody = [{ x: 11, y: 11 }];
