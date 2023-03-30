@@ -1,5 +1,5 @@
 let lastRender = 0;
-let snakeSpeed = 5;
+let snakeSpeed = 8;
 let inputDirection = { x: 0, y: 0 };
 let lastDirection = { x: 0, y: 0 };
 
@@ -197,11 +197,11 @@ function getSpeed() {
 
   for (let i = 0; i < level.length; i++) {
     if (level[0].checked) {
-      snakeSpeed = 5;
+      snakeSpeed = 8;
     } else if (level[1].checked) {
-      snakeSpeed = 15;
+      snakeSpeed = 18;
     } else if (level[2].checked) {
-      snakeSpeed = 20;
+      snakeSpeed = 28;
     }
   }
 }
