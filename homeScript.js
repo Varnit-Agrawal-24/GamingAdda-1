@@ -16,7 +16,7 @@ playbtn.addEventListener("click", function () {
   if (Playerage == "" || Playername == "") {
     alert("Enter Your Details");
   } else {
-    wlcPage.classList.add("hidden");
+    wlcPage.style.display = "none";
     wrap.classList.remove("hidden");
     showName.innerText = "Player: " + Playername;
     localStorage.setItem("loginUser", Playername);
@@ -24,7 +24,7 @@ playbtn.addEventListener("click", function () {
 });
 
 if (localStorage["loginUser"]) {
-  wlcPage.classList.add("hidden");
+  wlcPage.style.display = "none";
   overlay.classList.add("hidden");
   document.getElementById("arrowNext").style.display = "none";
   wrap.classList.remove("hidden");
