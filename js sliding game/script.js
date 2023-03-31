@@ -32,7 +32,7 @@ function stopSliding(){
 
     if(diffrence > width  || diffrence<-width){
         var score = "score:" + count
-        alert(score)
+        alert("Your score is: " + score)
         location.reload()
     }
 
