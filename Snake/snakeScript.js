@@ -201,7 +201,7 @@ function getSpeed() {
     } else if (level[1].checked) {
       snakeSpeed = 18;
     } else if (level[2].checked) {
-      snakeSpeed = 28;
+      snakeSpeed = 60;
     }
   }
 }

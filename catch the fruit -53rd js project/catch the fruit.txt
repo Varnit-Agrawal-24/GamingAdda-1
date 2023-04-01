@@ -1,0 +1,6 @@
+Catch the Fruit Game - 53rd Javascript Project
+
+Steps Followed:
+1. move the monkey on right and left click
+2. make banana fall randomly
+3. apply hit detection and show score
