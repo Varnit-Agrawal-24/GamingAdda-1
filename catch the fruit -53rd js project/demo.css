@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background:black;
+   
+}
+
+#game{
+    background:white;
+    height: 500px;
+    width: 300px; 
+    position: relative;
+margin: 0 auto;
+overflow: hidden;
+background-image:url('jungle.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+#banana{
+    width: 100px;
+    height: 100px; 
+    animation: slide 2s linear infinite;
+    position:relative;
+    background-image:url('banana.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@keyframes slide{
+    0%{top:0}
+    100%{top:600px}
+}
+
+#monkey{
+    width: 100px;
+    height: 100px;
+   
+    position: absolute;
+    top: 400px;
+    left: 100px;
+    background-image:url('monkey.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#score{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    color: black;
+    font-weight: 900;
+}
