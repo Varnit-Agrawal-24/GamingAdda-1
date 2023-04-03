@@ -4,6 +4,8 @@
   font-family: "Press Start 2P", cursive;
 }
 body {
+  height: 100vh;
+  width: 100vw;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -90,6 +92,10 @@ body {
   font-size: 2vmin;
   cursor: pointer;
 }
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
 
 .navbar {
   display: flex;
@@ -101,6 +107,7 @@ body {
   position: relative;
 }
 #logout {
+  font-size: 2vmin;
   cursor: pointer;
   color: rgb(255, 255, 255);
   transition: text-shadow 0.5s ease-in-out;
@@ -110,6 +117,7 @@ body {
 }
 
 #logo {
+  font-size: 4vmin;
   margin: 0;
   margin-left: 40px;
   color: rgb(255, 255, 255);
@@ -126,7 +134,7 @@ body {
   position: relative;
   align-items: center;
   width: 100%;
-  height: 600px;
+  height: 80%;
   padding: 50px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -138,8 +146,10 @@ body {
 }
 #console {
   position: relative;
-  width: 650px;
-  height: 500px;
+  /* width: 650px;
+  height: 500px; */
+  width: 50vw;
+  height: 67vh;
   background-image: url(./img/console.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -185,7 +195,8 @@ body {
   position: absolute;
   width: 130px;
   top: 290px;
-  left: 815px;
+  /* left: 815px; */
+  left: 928px;
   z-index: 1;
 }
 #arrowStart img {
@@ -200,10 +211,14 @@ body {
 }
 #gameStack {
   position: absolute;
-  width: 230px;
+  /* width: 230px;
   height: 170px;
   top: 95px;
-  left: 82px;
+  left: 82px;*/
+  width: 32vmin;
+  height: 24vmin;
+  top: 12vmin;
+  left: 10vmin;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -216,27 +231,37 @@ body {
 }
 .nextGame {
   position: absolute;
-  top: 301px;
+  /* top: 301px;
   left: 288px;
   width: 32px;
-  height: 32px;
+  height: 32px; */
+  top: 40.8vmin;
+  left: 38.8vmin;
+  width: 4vmin;
+  height: 4vmin;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
 }
 .lastGame {
   position: absolute;
-  top: 301px;
+  /* top: 301px;
   left: 70px;
   width: 32px;
-  height: 32px;
+  height: 32px; */
+  top: 40.8vmin;
+  left: 9.8vmin;
+  width: 4vmin;
+  height: 4vmin;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
 }
 .nowPlaying {
-  width: 450px;
-  height: 200px;
+  /* width: 450px;
+  height: 200px; */
+  width: 60vmin;
+  height: 30vmin;
   text-align: center;
   position: relative;
 }
@@ -247,19 +272,24 @@ body {
   text-align: center;
 }
 .nowPlaying h3 {
+  font-size: 3vmin;
   color: rgb(255, 255, 255);
   text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
 }
 .frame {
   position: absolute;
-  width: 450px;
-  top: -60px;
+  /* width: 450px;
+  top: -60px; */
+  width: 60vmin;
+  top: -8vmin;
   left: 0;
 }
 .selectedGames {
   position: relative;
-  width: 300px;
-  height: 100px;
+  /* width: 300px;
+  height: 100px; */
+  width: 50vmin;
+  height: 13vmin;
   border: 1px dotted rgb(101, 206, 240);
   margin: auto;
   overflow: hidden;
@@ -270,9 +300,49 @@ body {
   height: 100%;
   transition: 0.6s ease-in;
 }
+.gameSelect h4 {
+  font-size: 2.2vmin;
+}
 .gameSelect a {
   cursor: pointer;
 }
 .gameSelect a:hover img {
   transform: scale(1.05);
+}
+
+@media only screen and (orientation: portrait) {
+  #container {
+    flex-direction: column;
+    padding: 20px 50px;
+    gap: 8vh;
+  }
+
+  #overlay,
+  #arrowNext {
+    display: none;
+  }
+
+  #console {
+    width: 80vmin;
+    height: 100vmin;
+    background-image: url(./img/console2.png);
+  }
+  #gameStack {
+    width: 47vmin;
+    height: 36vmin;
+    top: 18vmin;
+    left: 16vmin;
+  }
+  .nextGame {
+    top: 60.8vmin;
+    left: 57.8vmin;
+    width: 6vmin;
+    height: 6vmin;
+  }
+  .lastGame {
+    top: 60.8vmin;
+    left: 14.4vmin;
+    width: 6vmin;
+    height: 6vmin;
+  }
 }
