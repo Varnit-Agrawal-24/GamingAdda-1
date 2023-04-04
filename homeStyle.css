@@ -345,4 +345,8 @@ body {
     width: 6vmin;
     height: 6vmin;
   }
+  .selectedGames {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+  }
 }

@@ -119,3 +119,33 @@ body {
   margin-top: 30px;
   cursor: pointer;
 }
+
+/* btn for mobile */
+
+.btn4mobile {
+  transform: rotate(45deg);
+  width: 35vmin;
+  height: 35vmin;
+  margin-top: 50px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.btn4mobile button {
+  border: 0px none;
+  background-color: transparent;
+}
+
+@media only screen and (orientation: portrait) {
+  #overlay {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+  #card {
+    width: 60vmin;
+    height: 80vmin;
+  }
+  .btn4mobile {
+    display: grid;
+  }
+}

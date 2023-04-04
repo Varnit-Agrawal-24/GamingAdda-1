@@ -20,6 +20,10 @@ let overlayCard = document.getElementById("card");
 let overlayScore = document.getElementById("Afterscore");
 let overlayHiscore = document.getElementById("AfterhighScore");
 
+let mbtnUp = document.getElementById("mUp");
+let mbtnRight = document.getElementById("mRight");
+let mbtnLeft = document.getElementById("mLeft");
+let mbtnDown = document.getElementById("mDown");
 // Game loop
 function main(currentTime) {
   window.requestAnimationFrame(main);
@@ -127,6 +131,23 @@ window.addEventListener("keydown", (e) => {
       inputDirection = { x: -1, y: 0 };
       break;
   }
+});
+
+mbtnUp.addEventListener("click", function () {
+  if (lastDirection.y !== 0) return;
+  inputDirection = { x: 0, y: -1 };
+});
+mbtnRight.addEventListener("click", function () {
+  if (lastDirection.x !== 0) return;
+  inputDirection = { x: 1, y: 0 };
+});
+mbtnLeft.addEventListener("click", function () {
+  if (lastDirection.x !== 0) return;
+  inputDirection = { x: -1, y: 0 };
+});
+mbtnDown.addEventListener("click", function () {
+  if (lastDirection.y !== 0) return;
+  inputDirection = { x: 0, y: 1 };
 });
 
 function getDirection() {
