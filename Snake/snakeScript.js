@@ -134,18 +134,30 @@ window.addEventListener("keydown", (e) => {
 });
 
 mbtnUp.addEventListener("click", function () {
+  if (overlayCard.classList.contains("hidden")) {
+    return;
+  }
   if (lastDirection.y !== 0) return;
   inputDirection = { x: 0, y: -1 };
 });
 mbtnRight.addEventListener("click", function () {
+  if (overlayCard.classList.contains("hidden")) {
+    return;
+  }
   if (lastDirection.x !== 0) return;
   inputDirection = { x: 1, y: 0 };
 });
 mbtnLeft.addEventListener("click", function () {
+  if (overlayCard.classList.contains("hidden")) {
+    return;
+  }
   if (lastDirection.x !== 0) return;
   inputDirection = { x: -1, y: 0 };
 });
 mbtnDown.addEventListener("click", function () {
+  if (overlayCard.classList.contains("hidden")) {
+    return;
+  }
   if (lastDirection.y !== 0) return;
   inputDirection = { x: 0, y: 1 };
 });

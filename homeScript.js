@@ -5,7 +5,8 @@ let wlcPage = document.getElementById("welcomePage");
 let logbtn = document.getElementById("logout");
 let covers = document.querySelectorAll(".cover");
 let gamesSelected = document.querySelectorAll(".gameSelect");
-
+let profile = document.getElementById("userProfile");
+let logBox = document.getElementById("log");
 let count = 0;
 
 //for welcome page
@@ -18,7 +19,7 @@ playbtn.addEventListener("click", function () {
   } else {
     wlcPage.style.display = "none";
     wrap.classList.remove("hidden");
-    showName.innerText = "Player: " + Playername;
+    showName.innerText = Playername;
     localStorage.setItem("loginUser", Playername);
   }
 });
@@ -29,13 +30,27 @@ if (localStorage["loginUser"]) {
   document.getElementById("arrowNext").style.display = "none";
   wrap.classList.remove("hidden");
   document.getElementById("playerName").innerText =
-    "Player: " + localStorage.getItem("loginUser");
+    localStorage.getItem("loginUser");
 }
 logbtn.addEventListener("click", function () {
   setTimeout(() => {
     localStorage.clear();
     location.reload();
   }, 1000);
+});
+
+//for profile
+let live = 0;
+profile.addEventListener("click", function () {
+  if (live == 0) {
+    document.getElementById("playerName").style.transform = "translateX(0)";
+    logBox.style.transform = "translateX(0)";
+    live++;
+  } else {
+    document.getElementById("playerName").style.transform = "translateX(150vw)";
+    logBox.style.transform = "translateX(150vw)";
+    live--;
+  }
 });
 
 // for console cover

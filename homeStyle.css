@@ -106,15 +106,39 @@ body {
   height: 80px;
   position: relative;
 }
-#logout {
-  font-size: 2vmin;
+#userProfile {
   cursor: pointer;
+}
+#userBox {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  font-size: 2vmin;
   color: rgb(255, 255, 255);
-  transition: text-shadow 0.5s ease-in-out;
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+  z-index: 1;
+  overflow: hidden;
+  text-align: right;
+  padding-right: 20px;
 }
-#logout:hover {
+#playerName {
+  transform: translateX(150vw);
+  transition: transform 1.8s ease-out;
+}
+#log {
+  display: flex;
+  align-items: center;
+  transform: translateX(150vw);
+  transition: transform 2s ease-in-out 0.1s;
+}
+#logout {
+  font-size: 1.5vmin;
+  cursor: pointer;
+  position: relative;
+}
+/* #logout:hover {
   text-shadow: 6px -4px 11px #ff0000, -4px 3px 14px #0000ff;
-}
+} */
 
 #logo {
   font-size: 4vmin;
@@ -265,12 +289,7 @@ body {
   text-align: center;
   position: relative;
 }
-#playerName {
-  position: absolute;
-  width: 100%;
-  top: -160px;
-  text-align: center;
-}
+
 .nowPlaying h3 {
   font-size: 3vmin;
   color: rgb(255, 255, 255);
@@ -316,7 +335,12 @@ body {
     padding: 20px 50px;
     gap: 8vh;
   }
-
+  #logo {
+    margin: 0;
+  }
+  #userBox {
+    bottom: -5px;
+  }
   #overlay,
   #arrowNext {
     display: none;

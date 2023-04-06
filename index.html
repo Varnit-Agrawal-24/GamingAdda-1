@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./homeStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Gaming Adda</title>
   </head>
   <body>
@@ -28,7 +32,20 @@
     <div id="wrapper" class="hidden">
       <nav class="navbar">
         <h2 id="logo">Gaming Adda</h2>
-        <a id="logout">LogOut</a>
+        <i
+          id="userProfile"
+          class="fa fa-user-circle-o"
+          style="font-size: 5vmin; color: palegoldenrod"
+        ></i>
+        <div id="userBox">
+          <h3 id="playerName"></h3>
+          <div id="log">
+            <a id="logout"
+              ><i class="fa fa-power-off" style="font-size: 2.5vmin"></i
+              >Logout</a
+            >
+          </div>
+        </div>
       </nav>
       <div id="container">
         <div id="overlay" class="overlay"></div>
@@ -58,7 +75,6 @@
           <button class="lastGame" onclick="back()"></button>
         </div>
         <div class="nowPlaying">
-          <h3 id="playerName"></h3>
           <img class="frame" src="./img/frame.png" alt="" />
           <h3>Now Playing</h3>
           <div class="selectedGames">
