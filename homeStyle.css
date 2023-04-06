@@ -108,6 +108,8 @@ body {
 }
 #userProfile {
   cursor: pointer;
+  width: 9vmin;
+  border-radius: 35px;
 }
 #userBox {
   position: absolute;
@@ -126,8 +128,6 @@ body {
   transition: transform 1.8s ease-out;
 }
 #log {
-  display: flex;
-  align-items: center;
   transform: translateX(150vw);
   transition: transform 2s ease-in-out 0.1s;
 }
